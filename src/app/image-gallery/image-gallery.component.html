@@ -6,7 +6,7 @@
     *ngFor="let image of images"
   >
     <img [src]="image.url" alt="" class="w-full rounded-sm" />
-    <button class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">
+    <button (click)="addToFav(image.id)" class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">
       Add to fav
     </button>
   </div>

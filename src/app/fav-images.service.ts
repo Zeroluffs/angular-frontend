@@ -12,4 +12,9 @@ export class FavImagesService {
   getFavImages(): Observable<any> {
     return this.http.get(`${API_URL}images`);
   }
+  addFavImage(image: string): Observable<any> {
+    return this.http.post(`${API_URL}images/favourites/add`, {
+      image_id: image,
+    });
+  }
 }

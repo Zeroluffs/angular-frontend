@@ -14,4 +14,9 @@ export class ImageGalleryComponent implements OnInit {
       this.images = data;
     });
   }
+  addToFav(image: string) {
+    this.imageService.addFavImage(image).subscribe((data) => {
+      console.log(data);
+    });
+  }
 }

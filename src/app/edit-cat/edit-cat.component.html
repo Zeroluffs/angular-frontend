@@ -3,23 +3,52 @@
   <form>
     <div class="flex flex-col gap-4 mt-2">
       <label for="name">Name</label>
-      <input type="text" [(ngModel)]="name"  class="bg-gray-300 rounded-md h-[32px] p-4" name="name" id="name" />
+      <input
+        type="text"
+        [(ngModel)]="name"
+        class="bg-gray-300 rounded-md h-[32px] p-4"
+        name="name"
+        id="name"
+      />
     </div>
     <div class="flex flex-col gap-4 mt-2">
       <label for="age">Age</label>
-      <input [(ngModel)]="age" class="bg-gray-300 rounded-md h-[32px] p-4" type="number" name="age" id="age" />
+      <input
+        [(ngModel)]="age"
+        class="bg-gray-300 rounded-md h-[32px] p-4"
+        type="number"
+        name="age"
+        id="age"
+      />
     </div>
     <div class="flex flex-col gap-4 mt-2">
       <label for="breed">Breed</label>
-      <input  [(ngModel)]="breed" class="bg-gray-300  rounded-md h-[32px] p-4" type="text" name="breed" id="breed" />
+      <input
+        [(ngModel)]="breed"
+        class="bg-gray-300 rounded-md h-[32px] p-4"
+        type="text"
+        name="breed"
+        id="breed"
+      />
     </div>
     <div class="flex flex-col gap-4 mt-2">
       <label for="image">Image</label>
-      <img [src]="image" alt="" class="p-4 w-[200px]"  id="image" />
+      <img [src]="image" alt="" class="p-4 w-[200px]" id="image" />
     </div>
-    <button class="bg-blue-200 text-gray-700 rounded-md h-[32px] w-[124px]"  (click)="openModal()">Choose Image</button>
+    <div class="flex flex-col gap-6 justify-center items-center">
+      <button
+        class="bg-blue-200 text-gray-700 rounded-md h-[32px] w-[124px]"
+        (click)="openModal()"
+      >
+        Choose Image
+      </button>
 
-    <button class="bg-blue-200 text-gray-700 rounded-md h-[32px] w-[124px]"  (click)="editCat()">Create</button>
+      <button
+        class="bg-blue-400 text-gray-700 rounded-md h-[32px] w-[124px]"
+        (click)="editCat()"
+      >
+        Edit
+      </button>
+    </div>
   </form>
 </div>
-

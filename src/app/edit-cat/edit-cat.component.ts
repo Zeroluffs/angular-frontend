@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageModalComponent } from '../image-modal/image-modal.component';
+import { API_URL } from '../shared/api.constans';
 
 @Component({
   selector: 'app-edit-cat',
@@ -34,25 +35,23 @@ export class EditCatComponent implements OnInit {
   }
 
   openModal(): void {
-    this.http
-      .get<any[]>('http://localhost:3000/images/favourites/')
-      .subscribe((data) => {
-        this.images = data;
-        const dialogRef = this.dialog.open(ImageModalComponent, {
-          data: { images: this.images },
-        });
-        dialogRef.afterClosed().subscribe((result) => {
-          this.image = result;
-        });
+    this.http.get<any[]>(`${API_URL}images/favourites`).subscribe((data) => {
+      this.images = data;
+      const dialogRef = this.dialog.open(ImageModalComponent, {
+        data: { images: this.images },
       });
+      dialogRef.afterClosed().subscribe((result) => {
+        this.image = result;
+      });
+    });
   }
   editCat() {
     console.log(this.name, this.breed, this.age, this.image, this._id);
     this.http
-      .patch(`http://localhost:3000/cats/${this._id}`, {
+      .patch(`${API_URL}cats/${this._id}`, {
         name: this.name,
         breed: this.breed,
-        age: this.age,
+        age: Number(this.age),
         image: this.image,
       })
       .subscribe((data) => {

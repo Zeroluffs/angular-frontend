@@ -11,4 +11,8 @@ export class GetCatsService {
   getCats(): Observable<any> {
     return this.http.get('http://localhost:3000/cats');
   }
+
+  deleteCat(id: string): Observable<any> {
+    return this.http.delete(`http://localhost:3000/cats/${id}`);
+  }
 }

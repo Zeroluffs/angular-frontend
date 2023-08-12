@@ -18,6 +18,11 @@ export class CatsListComponent implements OnInit {
     // Use the navigate method to navigate to another route
     this.router.navigate(['/create']).then((r) => console.log(r));
   }
+  delete(id: string) {
+    this.imageService.deleteCat(id).subscribe((data) => {
+      this.images = this.images.filter((image) => image._id !== id);
+    });
+  }
   ngOnInit(): void {
     this.imageService.getCats().subscribe((data) => {
       this.images = data;

@@ -15,7 +15,7 @@
       <p class="text-gray-700 text-sm">{{ image.age }}</p>
     </div>
     <div class="flex flex-row justify-between">
-      <button class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">
+      <button (click)="edit(image)" class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">
         Edit
       </button>
       <button (click)="delete(image._id)" class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">

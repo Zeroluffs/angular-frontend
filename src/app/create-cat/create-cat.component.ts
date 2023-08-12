@@ -31,8 +31,6 @@ export class CreateCatComponent {
         });
         dialogRef.afterClosed().subscribe((result) => {
           this.image = result;
-          console.log(this.image);
-          console.log('The dialog was closed');
         });
       });
   }

@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { CatsListComponent } from './cats-list/cats-list.component';
+import { EditCatComponent } from './edit-cat/edit-cat.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CatsListComponent } from './cats-list/cats-list.component';
     CreateCatComponent,
     ImageModalComponent,
     CatsListComponent,
+    EditCatComponent,
   ],
   imports: [
     HttpClientModule,

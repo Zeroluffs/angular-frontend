@@ -23,6 +23,17 @@ export class CatsListComponent implements OnInit {
       this.images = this.images.filter((image) => image._id !== id);
     });
   }
+  edit(image: any) {
+    const queryParams = {
+      _id: image._id,
+      name: image.name,
+      breed: image.breed,
+      age: image.age,
+      image: image.image,
+    };
+    this.router.navigate(['/edit'], { queryParams });
+  }
+
   ngOnInit(): void {
     this.imageService.getCats().subscribe((data) => {
       this.images = data;

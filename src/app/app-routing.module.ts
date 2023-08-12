@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { CreateCatComponent } from './create-cat/create-cat.component';
+import { CatsListComponent } from './cats-list/cats-list.component';
 
 const routes: Routes = [
   {
@@ -9,7 +10,11 @@ const routes: Routes = [
     component: ImageGalleryComponent,
   },
   {
-    path: 'create-cat',
+    path: 'cats',
+    component: CatsListComponent,
+  },
+  {
+    path: 'create',
     component: CreateCatComponent,
   },
 ];

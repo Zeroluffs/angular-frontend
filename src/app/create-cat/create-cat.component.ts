@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ImageModalComponent } from '../image-modal/image-modal.component';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-cat',
@@ -17,6 +18,7 @@ export class CreateCatComponent {
   constructor(
     private dialog: MatDialog,
     private http: HttpClient,
+    private router: Router,
   ) {}
 
   openModal(): void {
@@ -45,7 +47,7 @@ export class CreateCatComponent {
         image: this.image,
       })
       .subscribe((data) => {
-        console.log(data);
+        this.router.navigate(['/cats']).then((r) => console.log(r));
       });
   }
 }

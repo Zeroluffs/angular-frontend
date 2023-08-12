@@ -1,0 +1,27 @@
+<button (click)="goCreate()" class="w-[122px] h-[32px] m-[12px] bg-blue-200 text-gray-700 rounded-md">
+  New Cat
+</button>
+<div
+  class="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-2"
+>
+  <div
+    class="w-[284px] gap-4 flex flex-col"
+    *ngFor="let image of images"
+  >
+    <img [src]="image.image" alt="" class="w-full rounded-sm" />
+    <div class="flex flex-col ">
+      <p class="text-gray-700 text-sm">{{ image.name }}</p>
+      <p class="text-gray-700 text-sm">{{ image.breed }}</p>
+      <p class="text-gray-700 text-sm">{{ image.age }}</p>
+    </div>
+    <div class="flex flex-row justify-between">
+      <button class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">
+        Edit
+      </button>
+      <button class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">
+        Delete
+      </button>
+    </div>
+
+  </div>
+</div>

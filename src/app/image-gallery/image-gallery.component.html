@@ -1,7 +1,13 @@
-<div class="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-2">
-  <div class="w-[284px] gap-4 flex flex-col justify-center items-center" *ngFor="let image of images">
+<div
+  class="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-2"
+>
+  <div
+    class="w-[284px] gap-4 flex flex-col justify-center items-center"
+    *ngFor="let image of images"
+  >
     <img [src]="image.url" alt="" class="w-full rounded-sm" />
-    <button class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">Add to fav</button>
+    <button class="w-[122px] h-[32px] bg-blue-200 text-gray-700 rounded-md">
+      Add to fav
+    </button>
   </div>
 </div>
-

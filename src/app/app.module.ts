@@ -13,6 +13,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import { CatsListComponent } from './cats-list/cats-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     CreateCatComponent,
     ImageModalComponent,
+    CatsListComponent,
   ],
   imports: [
     HttpClientModule,
